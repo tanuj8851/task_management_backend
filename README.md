@@ -29,9 +29,9 @@ This is a comprehensive Task Management System that empowers users to efficientl
 
 - **SQL**
   ```json
-  {
+  
    CREATE DATABASE task_management;
-  }
+  
 
 - **Run the following schema to create the necessary tables**
    ```json

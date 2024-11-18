@@ -35,16 +35,14 @@ This is a comprehensive Task Management System that empowers users to efficientl
 
 - **Run the following schema to create the necessary tables**
    ```json
-  {
   CREATE TABLE tasks (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    task VARCHAR(255) NOT NULL,
-    details TEXT,
-    completed BOOLEAN DEFAULT FALSE,
-    taskCreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    userId INT,
-    FOREIGN KEY (userId) REFERENCES users(userId))
-  }
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    status ENUM('pending', 'in-progress', 'completed') DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+  );
    
 
 
